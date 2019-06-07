@@ -29,9 +29,23 @@ Look through the application code. If you have the old Lambda Times (Applied Jav
 ## Self-Study/Essay Questions
 
 - [ ] What are PropTypes used for? Please describe why it's important to type check our data in JavaScript.
+
+Proptypes are used to safe-guard the integrity of React app by allowing developers to define the types of data (string, array, object, boolean, ...) that is expected for a given props. It also allows to prompt more meaningful errors in the console when the received type does not match the expected type. Since Javascript is not a “Typed” language, the developers App is exposed to potential error that could not be anticipated. PopTypes allow just that.
+
 - [ ] Describe a life-cycle event in React?
+
+React, life-cycle has 3 phases. (1) Component instantiation where a given component is born through its invocation/constructor. (2) Component update, where a component state is updated through props and event. (3) Component unmounted when the component has reached the end of its life cycle. At each stage, React provides a set of methods such as “componentDidMount()” that allow developers to execute specific code that need to be executed at specific stage 
+
 - [ ] Explain the details of a Higher Order Component?
+
+A Higher Order Component is a function that can “enrich” other components with extra props. It basically receive a components, enrich the received component with extra props and return it. This allows to give direct access to specific props that can be “shared” across different components, without having them built-in in each component and/or inherited from their respective parents.
+
 - [ ] What are three different ways to style components in React? Explain some of the benefits of each.
+
+(1) The classical approach with reference to an external CSS, the main benefits here resides in the fact that the App can be styled by a person that does not know/or have to code, and straight forward to start. Downside is that it is not easy to accommodate dynamic Apps behaviour 
+(2) Using React Strap to take advantage of the bootstrap library. Main advantage is that bootstrap is a very rich and powerful library, and amazing styling could be done in no time.  Downside is that it may have a lot of “side effect” due to the fact that it imports its own CSS into the project which can then conflict with our own CSS. It also has a long learning curve and therefore require more expertise to get the most of it.
+(3) Styled Component. Main advantage is we are able to style every single component directly inside the component without taking the risk of the style “leaking” outside its boundary. It also allows to use the same CSS syntaxes as well as pre-processor syntaxes, so there is no need to absorb an additional syntax to make it work. And finally it can accommodate dynamic behavior by using Javascript functions and variables. Downside is the mixing of logic, data and styling that can be seen as going against best practices ... 
+
 
 ## Project Setup
 
