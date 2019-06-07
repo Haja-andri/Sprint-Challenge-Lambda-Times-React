@@ -12,6 +12,7 @@ const Tabs = ({selectedTab, selectTabHandler, tabs}) => {
             {
               tabs.map(tab =>(
                 <Tab 
+                selectedTab = {selectedTab}
                 tab = {tab}
                 selectTabHandler = {selectTabHandler}
                 />
