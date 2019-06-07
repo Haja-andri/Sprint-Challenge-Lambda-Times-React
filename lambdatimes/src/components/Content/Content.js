@@ -6,6 +6,12 @@ import Cards from './Cards';
 // Importing our tab and card data. No need to change anything here.
 import { tabData, cardData } from '../../data';
 
+const fetchTabsFrom = () =>
+  Promise.resolve(tabData);
+
+const fetchCardsFrom = () =>
+  Promise.resolve(cardData);
+
 export default class Content extends Component {
   constructor(props) {
     super(props);
@@ -18,6 +24,12 @@ export default class Content extends Component {
 
   componentDidMount() {
     // Once the component has mounted, get the data and reflect that data on the state.
+    fetchTabsFrom().then(tabs =>
+      this.setState({ tabs })
+    );
+    fetchCardsFrom().then(cards =>
+      this.setState({ cards })
+    );
   }
 
   changeSelected = tab => {
@@ -48,8 +60,14 @@ export default class Content extends Component {
           `selectedTab` that includes the currently selected tab
           and `selectTabHandler` that includes the function to change the selected tab
         */}
-        <Tabs tabs={this.state.tabs} />
-        <Cards cards={this.filterCards()} />
+        {}
+        <Tabs 
+          selectedTab = {this.props.selected}
+          selectTabHandler = {this.selectTabHandler}
+          tabs={this.state.tabs} 
+        />
+        <Cards 
+        cards={this.filterCards()} />
       </div>
     );
   }
