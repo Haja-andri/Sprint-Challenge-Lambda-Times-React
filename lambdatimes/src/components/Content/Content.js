@@ -53,7 +53,10 @@ export default class Content extends Component {
   };
 
   selectTabHandler = (tab) => {
-    console.log('this is clicked passing ' + tab)
+    this.setState ({
+      selected: tab
+      }
+    )
   }
 
   render() {
