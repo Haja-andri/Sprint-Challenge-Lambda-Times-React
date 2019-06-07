@@ -52,6 +52,10 @@ export default class Content extends Component {
     return this.state.cards;
   };
 
+  selectTabHandler = (tab) => {
+    console.log('this is clicked passing ' + tab)
+  }
+
   render() {
     return (
       <div className="content-container">

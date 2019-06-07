@@ -5,7 +5,8 @@ const Tab = props => {
       if they match, the className should be: 'tab active-tab', 
       if it is not it should just be 'tab'*/
   const onTabClick = () => {
-    props.selectTabHandler(props.tab);
+   props.selectTabHandler(props.tab);
+   // console.log('this is clicked passing ' + props.tab)
   }
 
   return (
