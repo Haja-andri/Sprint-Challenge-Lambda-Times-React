@@ -59,7 +59,7 @@ body {
   align-items: center;
 }
 .tabs {
-  border-bottom: 1px solid lightgrey;
+  border-bottom: 1px solid #d3d3d3;
   display: flex;
   justify-content: center;
   align-items: center;
