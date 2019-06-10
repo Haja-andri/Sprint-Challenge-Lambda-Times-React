@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components'
+import Logout from './Logout/Logout'
 
 const TopBarStyled = styled.div`
 
@@ -82,7 +83,7 @@ const TopBarContainerRight = styled.div`
 // Refactor this component to use styled components and not classNames. 
 // You can find the corresponding CSS in the CSS/index.css file
 
-const TopBar = () => {
+const TopBar = (logout) => {
   return (
     <TopBarStyled>
       <TopBarContainer>
@@ -93,7 +94,7 @@ const TopBar = () => {
           <span>GENERAL</span><span>BROWNBAG</span><span>RANDOM</span><span>MUSIC</span><span>ANNOUNCEMENTS</span>
         </TopBarContainerCenter>
         <TopBarContainerRight>
-          <span>LOG IN</span>
+          <Logout />
         </TopBarContainerRight>
       </TopBarContainer>
     </TopBarStyled>
